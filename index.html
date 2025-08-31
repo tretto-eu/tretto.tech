@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tretto.tech - Enterprise Knowledge Management Partners</title>
+    <link rel="stylesheet" href="tretto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90E2;     /* Refined Business Blue */
+            --secondary-color: #1D2530;   /* Deeper Slate */
+            --accent-color: #50E3C2;      /* Fresh Mint Accent */
+            --text-color: #333;
+            --background-color: #FFFFFF;
+            --section-bg: #F9FAFB;
+        }
+
+        /* Logo transformation */
+        .logo {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 8px var(--accent-color));
+        }
+
+        /* Professional styling overrides */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .hero {
+            background: var(--section-bg);
+            position: relative;
+            padding: 6rem 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, 
+                var(--primary-color) 0%, 
+                var(--accent-color) 100%);
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .partner-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #E2E8F0;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .integration-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin: 4rem 0;
+            align-items: center;
+        }
+
+        .integration-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .integration-feature .icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            display: grid;
+            place-items: center;
+            background: var(--section-bg);
+            border-radius: 50%;
+            color: var(--primary-color);
+        }
+        
+        .integration-feature .icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .enterprise-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            margin: 4rem 0;
+        }
+
+        .enterprise-section h2,
+        .enterprise-section p {
+            color: white;
+        }
+
+        .enterprise-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .enterprise-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta {
+            background-color: var(--primary-color);
+            border: 2px solid transparent;
+            font-weight: 500;
+        }
+
+        .cta.light {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        .cta:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .cta.light:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        @media (max-width: 768px) {
+            .integration-features,
+            .enterprise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 4rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <img src="logo.png" alt="Tretto Logo" class="logo">
+            <div class="nav-links">
+                <a href="https://tretto.eu">tretto.eu</a>
+                <a href="https://tretto.io">tretto.io</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Enterprise Knowledge Management Partners</h1>
+            <p>Seamless integration with industry-leading platforms to enhance your organization's knowledge infrastructure</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Integration Partners</h2>
+        <div class="partners-grid">
+            <div class="partner-card">
+                <h3>Notion</h3>
+                <p>Enhanced knowledge base integration</p>
+            </div>
+            <div class="partner-card">
+                <h3>SharePoint</h3>
+                <p>Enterprise content management</p>
+            </div>
+            <div class="partner-card">
+                <h3>Confluence</h3>
+                <p>Team collaboration platform</p>
+            </div>
+            <div class="partner-card">
+                <h3>Microsoft Teams</h3>
+                <p>Workplace communication</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Integration Features</h2>
+        <div class="integration-features">
+            <div class="integration-feature">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                </div>
+                <div>
+                    <h3>Secure Authentication</h3>
+                    <p>Enterprise-grade security with SSO and robust access control.</p>
+                </div>
+            </div>
+            <div class="integration-feature">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12.795A9 9 0 1111.205 3 9 9 0 0121 12.795z" /></svg>
+                </div>
+                <div>
+                    <h3>Data Sovereignty</h3>
+                    <p>Complete control over your data location, residency, and access policies.</p>
+                </div>
+            </div>
+            <div class="integration-feature">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg>
+                </div>
+                <div>
+                    <h3>Custom Workflows</h3>
+                    <p>Tailored integration paths and automated workflows for your specific needs.</p>
+                </div>
+            </div>
+            <div class="integration-feature">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 12" /></svg>
+                </div>
+                <div>
+                    <h3>API Access</h3>
+                    <p>Robust and well-documented API for custom implementations and extensions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="enterprise-section">
+        <div class="container">
+            <h2>Enterprise Solutions</h2>
+            <div class="enterprise-grid">
+                <div class="enterprise-card">
+                    <h3>Dedicated Support</h3>
+                    <p>24/7 enterprise-level support and consulting</p>
+                </div>
+                <div class="enterprise-card">
+                    <h3>Custom Development</h3>
+                    <p>Tailored solutions for unique requirements</p>
+                </div>
+                <div class="enterprise-card">
+                    <h3>SLA Guarantee</h3>
+                    <p>Enterprise-grade reliability and performance</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#" class="cta light">Request Enterprise Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services container">
+        <h2>Tretto Platform</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Knowledge Consulting</h3>
+                <p>Expert guidance on knowledge management and AI initiatives from our EU consultancy team.</p>
+                <a href="https://tretto.eu" class="cta">Visit tretto.eu</a>
+            </div>
+            <div class="service-card">
+                <h3>Information Pipeline</h3>
+                <p>Leverage our advanced content distillation system for better information flow.</p>
+                <a href="https://tretto.io" class="cta">Visit tretto.io</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Tretto Tech. All rights reserved.</p>
+            <div class="nav-links">
+                <a href="https://tretto.eu">tretto.eu</a>
+                <a href="https://tretto.io">tretto.io</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
